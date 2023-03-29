@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sidebar 01</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/main-dialog.css">
+  <script src="../static/js/extention/jquery.min.js"></script>
+  <script src="../static/js/extention/popper.js"></script>
+</head>
+
+<body>
+  <script>
+    const handleBtnClick = () => {
+      window.dialog.show({
+        content: 'Are you sure?',
+        okText: 'Logout',
+        cancelText: 'Cancel',
+        onOk: () => { window.location.href = '/home' },
+      })
+    }
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+  </script>
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class=" p-4 pt-5">
+        <div class="back">
+          <a class="previous" onclick="history.back()" style="color: aliceblue;"><img
+              src="../static/images/back-arrow.png" alt=""
+              style="width: 20px; height: 20px;  cursor: pointer; padding-bottom: 3px;">
+            Back</a>
+        </div>
+        <h3 class="title p-3" style="font-size: 30PX; text-align: center; color: rgb(204, 229, 245);">CATEGORY
+        </h3>
+        <ul class="list-unstyled components text-center">
+          <li class="active">
+          <li><a id="synonyms">Synonyms</a></li>
+          <li><a id="antonyms">Antonyms</a></li>
+          <li><a id="definitions">Definitions</a></li>
+          <li><a id="examples">Examples</a></li>
+          <li><a id="rhymes">Rhymes</a></li>
+          <li><a id="pronunciation">Pronunciation</a></li>
+          <li><a id="syllables">Syllables</a></li>
+          <li><a id="frequency">Frequency</a></li>
+          <li><a id="typeOf">Type of</a></li>
+          <li><a id="hasTypes">Has types</a></li>
+          <li><a id="partOf">Parts of</a></li>
+          <li><a id="hasParts">Has parts</a></li>
+          <li><a id="similarTo">Similar to</a></li>
+          <li><a id="instanceOf">Instance of</a></li>
+          <li><a id="hasInstances">Has instances</a></li>
+          <li><a id="also">Also</a></li>
+          <li><a id="entails">Entails</a></li>
+          <li><a id="memberOf">Member of</a></li>
+          <li><a id="hasMembers">Has members</a></li>
+          <li><a id="substanceOf">Substance of</a></li>
+          <li><a id="hasSubstances">Has substances</a></li>
+          <li><a id="inCategory">In category of</a></li>
+          <li><a id="hasCategories">Has categories</a></li>
+          <li><a id="usageOf">Usage of</a></li>
+          <li><a id="hasUsages">Has usages</a></li>
+          <li><a id="inRegion">In region</a></li>
+          <li><a id="regionOf">Region of</a></li>
+          <li><a id="pertainsTo">Pertains to</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="main-content px-5 pt-5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <div class="container-fluid d-flex justify-content-around ">
+          <div class="page-left d-flex pt-2">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary d-inline-block ml-auto"
+              style="height: 40px;">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only"></span>
+            </button>
+            <h4 class="px-3 pt-2">WordAPP</h4>
+          </div>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="page-right">
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+              <div class="dropdown lg-end">
+                <button class="nav-link btn" style="color:  rgb(93, 101, 101);" type="button" id="dropdownMenu2"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bookmarks</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <p class="dropdown-title text-center">Your Bookmarks</p>
+                  <div class="dropdown-divider"></div>
+                  <div class="tabs">
+                    <ul id="bm-ul-element" class="bookmark-list">
+                      <a id="bm-lists"><li class="bookmark-list-items"></li>
+                      <div class="dropdown-divider"></div></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="nav-link btn dropdown-toggle" style="color:  rgb(93, 101, 101);" type="button"
+                  id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">{{name}}</button>
+                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu2">
+                  <div class="dropdown-item d-flex justify-content-around">
+                    <div class="profile-left"><img src="../static/images/person-bounding-box.svg" alt="" style="height: 90px; width: 50px;"></div>
+                    <div class="profile-right px-4 mb-0">
+                      <div class="p-name"><p>Poongkannan P</p></div>
+                      <div class="p-email" style="font-size: small;"><p>kannasmile05@gmail.com</p></div>
+                      <div class="p-mobile" style="font-size: small;"><p>+91 89737 50987</p></div>
+                      <div class="p-mobile" style="font-size: small;">
+                        <a href="#myModal" data-toggle="modal">Change Password</a>
+                        <div class="modal" id="myModal" role="dialog">
+                          <div class="modal-dialog modal-lg">
+                          <div class="modal-header">
+                          <button class="close" data-dismiss="modal">×</button>
+                          <h3>Modal header</h3>
+                          </div>
+                          <div class="modal-body">
+                          <p>One fine body…</p>
+                          </div>
+                          <div class="modal-footer">
+                          <a href="#" class="btn">Close</a>
+                          <a href="#" class="btn btn-primary">Save changes</a>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item button-default link btn-trigger" style="text-align: center;" onclick={handleBtnClick()} type="button">Logout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content Page -->
+      <div class="main" id="main1">
+        <div class="row">
+          <div class="col-lg-6 mx-auto pt-4 mt-4">
+            <header class="text-center pb-5">
+              <h2 style="color: #5fa9b5;">{{word}}</h2>
+              <h4 class="h4" id="main-title"></h4>
+            </header>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <!-- CUSTOM BLOCKQUOTE -->
+            <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+              <a><div id="bookmark-tab" title="Add your Bookmarks" class="blockquote-custom-icon bg-info shadow-sm">
+                {% if is_bookmark is sameas false %}
+                <i id="icon" class="fa fa-star text-white"></i>
+                {% elif is_bookmark is sameas true %}
+                <i id="icon" class="fa fa-star text-warning"></i>
+                {% endif %}
+              </div></a>
+              <div class="dropdown-divider"></div>
+              <p class="mb-0 mt-4 font-italic">
+              <ul class="list-details font-italic" style="font-size: 16px;">
+                <li class="list-details-item" id="content-items" hidden></li>
+              </ul>
+              </p>
+            </blockquote><!-- END -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/extention/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/request.js"></script>
+    <script src="../static/js/dialogbox.js"></script>
+    <script src="../static/js/bookmark.js"></script>
+    <script src="../static/js/extention/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+# Generate a high stress for cpu to get auto scale in/out 
+ 
+kubectl run cpu-test --image containerstack/cpustress -- --cpu 4 --timeout 60s --metrics-brief
+
+# For crashLoopBackOff 
+
+kubectl run -i --tty load-generator --image=busybox:1.28 -- /bin/sh -c "echo completed"

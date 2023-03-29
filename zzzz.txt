@@ -1,0 +1,8 @@
+
+
+Prometheus metric:
+
+1. sub 'session_logged_in' with 'session_logged_out' to get total active users
+
+2. divide 'api_latency_sum' by 'api_latency_count' to get overall latency
+

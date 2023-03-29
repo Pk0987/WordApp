@@ -1,0 +1,27 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: alert-manager-config
+  namespace: observability
+spec:
+  route:
+    receiver: 'slack'
+    repeatInterval: 10m
+    routes:
+    - matchers:
+      - name: alertname
+        value: K8s_pod_crash_looping
+      repeatInterval: 5m
+    - matchers:
+      - name: alertname
+        value: host_medium_cpu_load
+    - matchers:
+      - name: alertname
+        value: host_high_cpu_load
+      repeatInterval: 10m
+  receivers:
+  - name: 'slack'
+    slackConfigs:
+    - apiURL:
+        name: secret-webHookURL
+        key: url
